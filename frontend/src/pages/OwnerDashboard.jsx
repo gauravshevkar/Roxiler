@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import api from "../api/axiosConfig";
 import "./ownercss.css";
-import AdminNavbar from "../component/admin_Navbar";
+import AdminNavbar from "../component/ownernav";
 
 export default function OwnerDashboard() {
   const [dashboardData, setDashboardData] = useState(null);

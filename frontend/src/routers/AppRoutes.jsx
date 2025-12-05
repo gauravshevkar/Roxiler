@@ -12,6 +12,7 @@ import AdminStoreList from "../pages/AdminStoreList";
 import AdminUserList from "../pages/AdminUserList";
 import AddStoreOwner from "../pages/Add_owner";
 import AddStore from "../pages/Add_stores";
+import ChangePassword from "../component/ChangePassword";
 
 export default function AppRoutes() {
   return (
@@ -90,6 +91,14 @@ export default function AppRoutes() {
           </ProtectedRoute>
         }
       />
+            <Route
+        path="/user/change-password"
+        element={
+          <ProtectedRoute role="user">
+            <ChangePassword />
+          </ProtectedRoute>
+        }
+      />
 
       {/* Owner Route */}
       <Route
@@ -100,6 +109,15 @@ export default function AppRoutes() {
           </ProtectedRoute>
         }
       />
+            <Route
+        path="/owner/change-password"
+        element={
+          <ProtectedRoute role="owner">
+            <ChangePassword />
+          </ProtectedRoute>
+        }
+      />  
+
 
       {/* Not Found */}
       <Route path="*" element={<NotFound />} />

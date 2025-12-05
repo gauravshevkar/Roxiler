@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import api from "../api/axiosConfig";
 import { useNavigate } from "react-router-dom";
 import "./userdashcss.css";
-import AdminNavbar from "../component/admin_Navbar";
+import AdminNavbar from "../component/ownernav";
 
 export default function StoreListing() {
   const [stores, setStores] = useState([]);

@@ -61,6 +61,7 @@
     font-size: 16px;
     font-weight: 500;
     transition: background-color 0.3s;
+    margin-left: 10px;
 }
 
 .nav-logout-btn:hover {
