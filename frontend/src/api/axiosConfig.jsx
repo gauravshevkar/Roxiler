@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://roxiler-frontend-7qd6.onrender.com/",
+  baseURL: "https://roxiler-backend1.onrender.com",
 });
 
 api.interceptors.request.use((config) => {
