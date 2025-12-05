@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const path = require("path");
 
 // Middlewares
 app.use(cors());
@@ -24,6 +25,16 @@ app.use("/api/stores", storeRoutes);
 app.use("/api/ratings", ratingRoutes);
 app.use("/api/owner", ownerRoutes);   // ONLY ONCE
 app.use("/api/user", userRoutes);     // user change-password route
+
+
+
+// React Build Serve
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+});
+
 
 // Base Route
 app.get("/", (req, res) => {
