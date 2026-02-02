@@ -130,6 +130,16 @@ const handleLogin = async (e) => {
           )}
         </div>
       </div>
+                <p style={{
+    color: "white",
+    position: "absolute", 
+    marginTop:"400px",
+    fontSize: "13px",
+  }}>
+  Please wait 1 minute after clicking Login. Redirecting…
+</p>
+  
+      
             <p style={{
     color: "white",
     position: "absolute",
